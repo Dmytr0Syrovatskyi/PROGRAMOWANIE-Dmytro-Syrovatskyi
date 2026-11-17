@@ -6,7 +6,7 @@ from database import Base
 class Movie(Base):
     __tablename__ = "movies"
 
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, autoincrement=True, index=True)
     title = Column(String, nullable=False)
     genres = Column(String, nullable=False)
 
@@ -14,7 +14,7 @@ class Movie(Base):
 class Link(Base):
     __tablename__ = "links"
 
-    movieId = Column(Integer, primary_key=True, index=True)
+    movieId = Column(Integer, primary_key=True, autoincrement=True, index=True)
     imdbId = Column(String, nullable=True)
     tmdbId = Column(String, nullable=True)
 
